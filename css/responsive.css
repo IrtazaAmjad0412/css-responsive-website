@@ -4,14 +4,253 @@
   * Add the media rule and the styles that belong to the MOBILE view only
 */
 
-@media (min-width: 1024px) {
-  /* .top-navigation .trigram {
-    display: none;
-  } */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  /* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
+/* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
+
+@media (min-width: 1024px) {
+  .top-navigation .trigram {
+    display: none;
+  }
+
+  .top-navigation ul li a:hover {
+    color: #434343;
+  }
+
+  .top-navigation ul li a.active {
+    color: #737373;
+  }
+
+  .top-navigation ul li a.active:hover {
+    color: #434343;
+  }
+
+  .teammate-social-icons div:hover {
+    background-color: #969696;
+  }
+
+  .social-icons div:hover {
+    color: white;
+  }
+
+  .email ul li a:hover {
+    color: white;
+  }
+
+  .phones ul li a:hover {
+    color: white;
+  }
 }
 
 /* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 4px 6px #dbdbdb;
+  }
+
+  .top-navigation ul {
+    display: none;
+  }
+
+  .portfolio-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-item {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .portfolio-item-info {
+    display: flex;
+    gap: 30px;
+  }
+
+  .item-title {
+    padding-top: 10px;
+  }
+
+  .teammates-list::before,
+  .teammates-list::after {
+    display: none;
+  }
+
+  .teammates-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .teammate {
+    display: flex;
+    align-items: center;
+    width: calc(50% - 20px);
+  }
+
+  .teammate-img-wrapper {
+    width: 100%;
+  }
+
+  .teammate-data {
+    width: 100%;
+  }
+
+  .teammate-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .teammate-social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .teammate-social-icons div {
+    background-color: #969696;
+  }
+
+  footer .social-icons div {
+    width: auto;
+  }
+
+  .social-icons div .icon {
+    background-color: white;
+  }
+
+  .social-icons div span {
+    display: none;
+  }
+
+  .footer-contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-contacts div {
+    width: calc(50% - 15px);
+  }
+
+  .footer-contacts .address {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-contacts .address p {
+    width: 50%;
+  }
+
+  .email ul li a {
+    color: white;
+  }
+
+  .phones ul li a {
+    color: white;
+  }
+}
+
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
+@media (max-width: 767px) {
+  header {
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 4px 6px #dbdbdb;
+  }
+
+  .top-navigation ul {
+    display: none;
+  }
+
+  .portfolio-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-item-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .section-info .subtext {
+    width: 100%;
+  }
+
+  .teammates-list::before,
+  .teammates-list::after {
+    display: none;
+  }
+
+  .teammates-list-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .teammate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #969696;
+  }
+
+  .teammate-img-wrapper {
+    width: 50%;
+    margin: 16px;
+  }
+
+  .teammate-data {
+    display: flex;
+    gap: 24px;
+  }
+
+  .teammate-social-icons {
+    display: flex;
+    gap: 16px;
+  }
+
+  .teammate-social-icons div {
+    background-color: #969696;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons div .icon {
+    background-color: white;
+  }
+
+  .social-icons div span {
+    color: white;
+  }
+
+  .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .email ul li a {
+    color: white;
+  }
+
+  .phones ul li a {
+    color: white;
+  }
+}
